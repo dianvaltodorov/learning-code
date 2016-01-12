@@ -1,0 +1,26 @@
+решаваме http://codeforces.com/contest/282 - №173
+
+за четвъртата  задача
+
+има две позиции - печеливши и губещи
+има ход, който можем ние да играем и който ще поставим противника ни в губеща позиция.
+Целта ни е да се опитаме да вкрама противника в губеща позиция.
+Целта е да поставим противника в губеща позиция.
+
+
+bool winnning(int a, int b)
+{
+  if(a==0 && b==0) return false;
+
+  for(int i = 0; i < a; i++)
+    if(!winning (i, b) return true;
+
+  for(int i = 0; i < b; i++)
+    if(!winning(a, i))  return true;
+
+  for(int i = 1; i <= min(a, b); ++i)
+      if(!winning(a-i, b-i)
+      1
+  return false;
+
+}

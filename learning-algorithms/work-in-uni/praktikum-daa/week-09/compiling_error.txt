@@ -1,0 +1,27 @@
+dijkstra-vasko.cpp:1:2: error: invalid preprocessing directive #inlcude
+ #inlcude<cstdio>
+  ^
+dijkstra-vasko.cpp:9:11: error: conflicting declaration ‘const int n’
+ const int n = 1 << 10;
+           ^
+dijkstra-vasko.cpp:4:5: error: ‘n’ has a previous declaration as ‘int n’
+ int n, m;
+     ^
+dijkstra-vasko.cpp: In function ‘void addEdge(int, int, int)’:
+dijkstra-vasko.cpp:12:25: error: invalid types ‘int[int]’ for array subscript
+   neiList[x][neiCount[x]] = y;
+                         ^
+dijkstra-vasko.cpp:13:3: error: ‘neiWeight’ was not declared in this scope
+   neiWeight[x][neiCount[x]] = w;
+   ^
+dijkstra-vasko.cpp: In function ‘void doInput()’:
+dijkstra-vasko.cpp:19:24: error: ‘scanf’ was not declared in this scope
+   scanf("%d %d", &n, &m);
+                        ^
+dijkstra-vasko.cpp: In function ‘int main()’:
+dijkstra-vasko.cpp:33:3: error: ‘cons’ was not declared in this scope
+   cons
+   ^
+dijkstra-vasko.cpp:34:1: error: expected ‘;’ before ‘}’ token
+ }
+ ^

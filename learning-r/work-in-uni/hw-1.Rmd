@@ -1,0 +1,88 @@
+---
+title: "Homework № 1"
+author: "Dian Todorov, 61670"
+date: "December 9, 2015"
+output: pdf_document
+---
+
+Task 1.
+======
+```{r}
+#install.packages("faraway")
+library("faraway")
+data(sat)
+attach(sat)
+```
+
+Task 2.
+======
+```{r}
+#nrow(sat) -> counts the number of rows in the dataframe
+#sample(nrow(sat), 35) -> emits 35 random numbers in the range of 50 and 35
+#sat[sample(nrow(sat), 35), ] -> emits random 35 items from the dataframe sat
+df <- data.frame(sat[sample(nrow(sat), 35), ] ) #creates the dataframe
+```
+
+Task 3.
+======
+3.1  Descriptive statistics
+-----
+
+```{r}
+summary(df)
+```
+
+3.2 Plots
+----
+
+* expends
+We divide the expends into 7 breaks and we rug them so we can examine their distribution.
+```{r}
+hist(expend, breaks = 7)
+rug(jitter(expend))
+```
+
+* ratio
+```{r}
+hist(ratio)
+```
+* salary
+
+After boxplotting the salaries of the teachers we see that there is an outlier. A close examination of the plot tells that there is a teacher with a bigger unusually bigger salary compared to others. By using the following we can exactly nam which one it is.
+
+```{r}
+salaryBoxplot <- boxplot(salary)
+df$salary[which(df$salary %in% salaryBoxplot$out)]
+row.names(df)[which(df$salary %in% salaryBoxplot$out)]
+```
+
+
+* takers
+
+```{r}s
+tmp = hist(takers, breaks = 10)
+lines(c(min(tmp$breaks), tmp$mids,max(tmp$breaks)),c(0 ,tmp$counts,0),type="l")
+```
+
+* verbal
+```{r}
+hist(verbal)
+```
+* math
+```{r}
+boxplot(verbal)
+```
+* total
+```{r}
+boxplot(verbal)
+```
+
+Task 4.
+======
+#3
+
+4.1 Expend to salary
+The coefficient of correlation is close to 1. Thus there is an approximate linar 
+```
+cor(expend, salary)
+```
