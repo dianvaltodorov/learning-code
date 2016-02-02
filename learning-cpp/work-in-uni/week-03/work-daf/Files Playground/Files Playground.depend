@@ -1,0 +1,21 @@
+# depslib dependency file v1.0
+1457449051 source:/home/dian/Documents/workspace/learning-code/learning-cpp/work-in-uni/week-03/Files Playground/main.cpp
+	"BankAccount.h"
+	<iostream>
+
+1457449133 /home/dian/Documents/workspace/learning-code/learning-cpp/work-in-uni/week-03/Files Playground/BankAccount.h
+	<fstream>
+
+1457449073 source:/home/dian/Documents/workspace/learning-code/learning-cpp/work-in-uni/week-03/Files Playground/BankAccount.cpp
+	"BankAccount.h"
+	<iostream>
+	<climits>
+	<fstream>
+
+1457449051 source:/home/dian/Documents/workspace/learning-code/learning-cpp/work-in-uni/week-03/work-daf/Files Playground/main.cpp
+	"BankAccount.h"
+	<iostream>
+
+1458048307 /home/dian/Documents/workspace/learning-code/learning-cpp/work-in-uni/week-03/work-daf/Files Playground/BankAccount.h
+	<fstream>
+

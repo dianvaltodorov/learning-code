@@ -1,0 +1,102 @@
+/* navigation */
+div.menu {
+    display: inline-block;
+    font-size: 14px;
+    font-family: Arial;
+    top: 20px;
+    position: fixed;
+}
+
+div.menu a {
+    font-weight: bold;
+    display:block;
+    border:1px solid rgb(253, 236, 236);
+    margin: 0 0 -1px;
+    padding: 8px 14px;
+    color: rgb(218, 107, 87);
+    cursor: pointer;
+}
+
+div.menu a:first-child {
+    border-radius: 6px 6px 0 0;
+}
+
+div.menu a:last-child {
+    border-radius: 0 0 6px 6px;
+}
+
+div.menu a:link {
+    text-decoration: none;
+    color: rgb(218, 107, 87);
+}
+
+div.menu a:visited {
+    text-decoration: none;
+    color: rgb(218, 107, 87);
+}
+
+div.menu a.selected {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(218, 107, 87);
+}
+
+div.menu a:hover:not(.selected), a:focus:not(.selected) {
+    text-decoration: none;
+    background-color: rgba(214, 174, 174, 0.1);
+    color: rgb(218, 107, 87);
+}
+
+/* document */
+h2 {
+    margin-bottom: 0px;
+    color: rgb(111, 103, 102);
+}
+
+p {
+    text-align: justify;
+}
+
+li {
+    text-align: justify;
+}
+
+ol >li, ul>li {
+    margin-bottom: 5px;
+}
+
+br {
+   display: block;
+   margin: 3px 0;
+   content: " ";
+}
+
+/* prettyprint */
+pre .str, code .str { color: #65B042; } /* string  - green */
+pre .kwd, code .kwd { color: #E28964; } /* keyword - dark pink */
+pre .com, code .com { color: #AEAEAE; font-style: italic; } /* comment - gray */
+pre .typ, code .typ { color: #89bdff; } /* type - light blue */
+pre .lit, code .lit { color: #3387CC; } /* literal - blue */
+pre .pun, code .pun { color: #fff; } /* punctuation - white */
+pre .pln, code .pln { color: #fff; } /* plaintext - white */
+pre .tag, code .tag { color: #89bdff; } /* html/xml tag    - light blue */
+pre .atn, code .atn { color: #bdb76b; } /* html/xml attribute name  - khaki */
+pre .atv, code .atv { color: #65B042; } /* html/xml attribute value - green */
+pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
+
+pre.prettyprint, code.prettyprint {
+    background-color: #000;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -o-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -khtml-border-radius: 8px;
+    border-radius: 8px;
+}
+
+pre.prettyprint {
+    width: 95%;
+    margin: 1em auto;
+    padding: 1em;
+    white-space: pre-wrap;
+}

@@ -1,0 +1,5 @@
+<!DOCTYPE NEWSPAPER [
+<!ELEMENT newaspaper(name, article+, publisher, date)>
+<!ELEMENT name CDATA>
+
+]>

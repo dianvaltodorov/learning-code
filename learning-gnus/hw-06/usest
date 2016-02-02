@@ -1,0 +1,57 @@
+#!/bin/sh
+# kFreeBSD do not accept scripts as interpreters, using #!/bin/sh and sourcing.
+if [ true != "$INIT_D_SCRIPT_SOURCED" ] ; then
+    set "$0" "$@"; INIT_D_SCRIPT_SOURCED=true . /lib/init/init-d-script
+fi
+### BEGIN INIT INFO
+# Provides:          usest
+# Required-Start:    $remote_fs $syslog
+# Required-Stop:     $remote_fs $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: usest is daemon for tracking user sessions
+# Description:       usest runs in the background and tracks session for a user
+### END INIT INFO
+
+# Author: Dian Todorov <dianvaltodorov@gmail.org>
+
+. /lib/lsb/init-functions
+
+DESC="usest is daemon for tracking user sessions"
+DAEMON=/usr/sbin/usest
+CONFIG=/et/usest.conf
+
+start() {
+        echo -n "Starting : "
+        touch /var/lock/usest 
+        $DAEMON $CONFIG
+        return
+}
+
+stop() {
+        echo -n "Shutting down : "
+        rm -f /var/lock/usest/
+        killproc usest
+        return
+}
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+    ;;
+  restart)
+    $0 stop
+    sleep 1
+    $0 start
+    ;;
+  *)
+    echo "Usage: /etc/init.d/usest {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0

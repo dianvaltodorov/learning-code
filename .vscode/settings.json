@@ -1,0 +1,5 @@
+{
+    "python.pythonPath": "/Users/diantodorov/.pyenv/versions/hackerrank/bin/python3",
+    "python.formatting.provider": "yapf",
+
+} 

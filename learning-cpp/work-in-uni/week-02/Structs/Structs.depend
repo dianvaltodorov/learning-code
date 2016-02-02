@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1456844551 source:/home/dian/Documents/workspace/learning-code/learning-cpp/work-in-uni/week-02/Structs/main.cpp
+	<iostream>
+	<string.h>
+	"Point.h"
+	"Point.h"
+	"Point.h"
+	"Point.h"
+	"Point.h"
+	"Student.h"
+
+1456841802 source:/home/dian/Documents/workspace/learning-code/learning-cpp/work-in-uni/week-02/Structs/Point.cpp
+	"Point.h"
+	<iostream>
+	<math.h>
+
+1456844497 /home/dian/Documents/workspace/learning-code/learning-cpp/work-in-uni/week-02/Structs/Point.h
+
+1456842327 /home/dian/Documents/workspace/learning-code/learning-cpp/work-in-uni/week-02/Structs/Student.h
+

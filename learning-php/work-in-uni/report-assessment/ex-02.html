@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+
+  <template id="mytemplate">
+      <img src="" alt="great image">
+      <div class="comment"></div>
+  </template>
+
+  <table>
+    <tr>
+      <template id="cells-to-repeat">
+        <td>some content</td>
+      </template>
+    </tr>
+  </table>
+
+  <script>
+  var t = document.querySelector('#mytemplate');
+  // Populate the src at runtime.
+  t.content.querySelector('img').src = 'logo.png';
+  var clone = document.importNode(t.content, true);
+  document.body.appendChild(clone);
+  </script>
+
+</body>
+</html>

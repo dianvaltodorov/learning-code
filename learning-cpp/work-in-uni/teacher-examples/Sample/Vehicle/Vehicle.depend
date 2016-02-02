@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1464090610 source:d:\dropbox\fmi\oop-16\l10\sample\vehicle\main.cpp
+	<iostream>
+	"Hydroplane.hpp"
+
+1464090651 d:\dropbox\fmi\oop-16\l10\sample\vehicle\hydroplane.hpp
+	"Boat.hpp"
+	"Plane.hpp"
+
+1464090730 d:\dropbox\fmi\oop-16\l10\sample\vehicle\boat.hpp
+	<string>
+	"Vehicle.hpp"
+
+1464090680 d:\dropbox\fmi\oop-16\l10\sample\vehicle\vehicle.hpp
+	<iostream>
+
+1464090533 d:\dropbox\fmi\oop-16\l10\sample\vehicle\plane.hpp
+	"Vehicle.hpp"
+

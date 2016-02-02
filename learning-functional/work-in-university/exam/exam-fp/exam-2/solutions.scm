@@ -1,0 +1,6 @@
+(define empty-tree '())
+(define (leaf? tree) (and (null? (left-subtree tree)) (null? (right-subtree tree))))
+(define (make-tree node left right ) (list node left right))
+(define (left-subtree tree) (cadr tree))
+(define (right-subtree tree) (car tree))
+(define (node tree) (car tree))

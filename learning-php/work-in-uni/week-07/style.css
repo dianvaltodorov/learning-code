@@ -1,0 +1,36 @@
+ /*div {
+    background: black;
+    color: white;
+    height: 100px;
+    margin: 10px;
+    padding-left: 100px;
+    border: 10px solid blue;
+}*/
+
+.course {
+    height: 100px;
+    width: 100px;
+    background: #00FF00;
+    color: #FFFFFF;
+    text-align: center;
+    margin: 10px;
+}
+
+#content {
+    height: 960px;
+    margin: 0 auto;
+}
+
+#content header {
+    text-align: right;
+}
+
+#content nav {
+    float: left;
+    width:  30%;
+}
+
+#content > div {
+    float: right;
+    width: 70%;
+}

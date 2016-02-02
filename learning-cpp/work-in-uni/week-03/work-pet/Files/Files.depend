@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1457677478 source:/home/dian/Documents/workspace/learning-code/learning-cpp/work-in-uni/week-03/work-s/Files/main.cpp
+	<iostream>
+	<fstream>
+

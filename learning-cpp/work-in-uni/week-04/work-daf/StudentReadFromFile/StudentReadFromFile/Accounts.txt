@@ -1,0 +1,3 @@
+Pesho	BG1234	200
+Cenko	BG$$$$	300
+Djordjano	BG50Centa	0.5

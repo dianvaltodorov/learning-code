@@ -1,0 +1,56 @@
+<body>
+    <div id="root">
+    </div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src=" https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/prop-types/prop-types.js"></script>
+   
+    <script type="text/babel">
+        const state= {eventCount: 0, username: ''}
+        const rootElement = document.getElementById('root');
+    
+        function App() {
+            return (
+                <div>
+                    <p>
+                        There have been {state.eventCount} events
+                    </p>
+                    <p>
+                        <button onHover={() => increment}>React</button>
+                    </p>    
+                    <p>You typed {state.username}</p>
+                    <p>
+                        <input onChange={updateUserName}/>
+                    </p>    
+                </div>
+            )
+        }
+
+        setState({username: 'bob'})
+
+        function increment(){
+            setState({
+                eventCount: state.eventCount + 1
+            })
+        }
+
+        function updateUserName(event){
+            setState({username:event.target.value})
+        }
+        function setState(newState) {
+            Object.assign(state, newState)
+            renderApp()
+        }
+
+        function renderApp(){
+            ReactDOM.render(
+                <App />,
+                rootElement
+            )
+        }
+        renderApp()
+
+        </script>
+</body>

@@ -1,0 +1,71 @@
+<body>
+    <div id="root">
+    </div>
+
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src=" https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/prop-types/prop-types.js"></script>
+   
+    <script type="text/babel">
+
+        class StopWatch extends React.Component {
+
+            state={lapse:0, running:false}
+            handleRunClick = () => {
+                this.setState({lapse:10, running:true})
+            }
+
+            handleClearClick = () => {
+                this.setState({lapse:0, running:false})
+            }
+
+            render(){
+                const {lapse, running} = this.props
+                const buttonStyles = {
+                    border: '1px solid black',
+                    background: '#fff',
+                    fontSize: '2em',
+                    padding: '15',
+                    margin: 5,
+                    width: 200,
+
+                }
+                return (
+                    <div style={{textAlign:'center'}}>
+                        <label style={{fontSize:'5em', display:'block'}}>0ms</label>
+                        <button onClick={this.handleRunClick} style={buttonStyles}>{running ? 'Stop': "Start"}</button>
+                        <button onClick={this.handleClearClick} style={buttonStyles}>Clear</button>
+                    </div>
+                )
+            }
+        }
+
+
+        // function StopWatch({lapse, running} ){
+        //     const buttonStyles = {
+        //         border: '1px solid black',
+        //         background: '#fff',
+        //         fontSize: '2em',
+        //         padding: '15',
+        //         margin: 5,
+        //         width: 200,
+
+        //     }
+        //     return (
+        //         <div style={{textAlign:'center'}}>
+        //             <label style={{fontSize:'5em', display:'block'}}>0ms</label>
+        //             <button style={buttonStyles}>{running ? 'Stop': "Start"}</button>
+        //             <button style={buttonStyles}>Clear</button>
+        //         </div>
+        //     )
+        // }
+        const rootElement = document.getElementById('root');
+        const element = <StopWatch running={true} lapse={10}></StopWatch>
+
+        ReactDOM.render(
+            element,
+            rootElement
+        )
+    </script>
+</body>

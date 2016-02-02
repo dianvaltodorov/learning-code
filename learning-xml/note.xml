@@ -1,0 +1,11 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/" xmlns:pay="http://engine.paymentgate.ru/webservices/epr/payment"><s:Header/><s:Body><pay:performPayment><params><systemId>Skyscanner</systemId><language>ru</language><hash/><orderId>bcc8bef2-abe5-48c2-b9c9-1d6370d60001</orderId><amount>152898</amount><currency>810</currency><pan>REDACTED</pan><expDate>REDACTED</expDate><cvc>REDACTED</cvc><cardholderName>REDACTED</cardholderName></params></pay:performPayment></s:Body></s:Envelope>
+
+
+
+https://www.pre-prod.skyscanner.local/transport_deeplink/4.0/US/en-us/USD/pobe/1/17538.16229.2017-06-28/air/airli/flights?itinerary=flight|-31436|259|17538|2017-06-28T23:45|16229|2017-06-29T04:55&carriers=-31436&passengers=1&channel=website&cabin_class=economy&facilitated=true&force_facilitated=true&ticket_price=89.76&is_npt=false&is_multipart=false&client_id=skyscanner_website&request_id=fad0b8b4-5d59-48f5-f6e4-77331ec25292&commercial_filters=false&q_datetime_utc=2017-05-29T08:38:49&isbp=1&tabs=CombinedDayView&qid=17538-1706282345--31436-0-16229-1706290455&sort=fqsscore&index=0&posidx=0&stops=0&new_skippy=true&website_name=Pobeda&fss_new_skippy=b&pre_redirect_id=f425543c-4eee-4230-9849-0cab08d1bbef
+
+
+https://www.pre-prod.skyscanner.local/transport_deeplink/4.0/RU/ru-ru/RUB/pobe/1/17538.16229.2017-06-28/air/airli/flights?itinerary=flight|-31436|259|17538|2017-06-28T23:45|16229|2017-06-29T04:55&carriers=-31436&passengers=1&channel=website&cabin_class=economy&facilitated=true&force_facilitated=true&ticket_price=5327.49&is_npt=false&is_multipart=false&client_id=skyscanner_website&request_id=af60b3ad-710c-4dbf-9dd9-275b4dfeaef8&commercial_filters=false&q_datetime_utc=2017-05-29T08:38:49&isbp=1&tabs=CombinedDayView&qid=17538-1706282345--31436-0-16229-1706290455&sort=fqsscore&index=0&posidx=3&stops=0&new_skippy=true&website_name=Pobeda%20(%D0%91%D1%80%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C%20%D1%87%D0%B5%D1%80%D0%B5%D0%B7%20Skyscanner)&fss_new_skippy=b&pre_redirect_id=568de9dd-6a34-4ac6-bebb-b1a1426f76c2
+
+
+function(){var href=baseElement.attr("href");return href?href.replace(/^(https?:)?\/\/[^\/]*/,""):""},self[__webkitAssign__defer]=function(fn,delay){var timeoutId;return outstandingRequestCount++,timeoutId=

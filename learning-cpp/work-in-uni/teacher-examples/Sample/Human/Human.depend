@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1464092407 source:d:\dropbox\fmi\oop-16\l10\sample\human\main.cpp
+	<iostream>
+	"FMIStudent.hpp"
+	"Master.hpp"
+
+1464092353 d:\dropbox\fmi\oop-16\l10\sample\human\fmistudent.hpp
+	"Student.hpp"
+	"Employee.hpp"
+
+1464091647 d:\dropbox\fmi\oop-16\l10\sample\human\student.hpp
+	"Human.hpp"
+
+1464091518 d:\dropbox\fmi\oop-16\l10\sample\human\human.hpp
+	<iostream>
+	<string>
+
+1464091834 d:\dropbox\fmi\oop-16\l10\sample\human\employee.hpp
+	<math.h>
+
+1464092434 d:\dropbox\fmi\oop-16\l10\sample\human\master.hpp
+	"Student.hpp"
+	"Employee.hpp"
+

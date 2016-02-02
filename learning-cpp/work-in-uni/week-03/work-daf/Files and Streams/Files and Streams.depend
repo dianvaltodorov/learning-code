@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1457448562 source:/home/dian/Documents/workspace/learning-code/learning-cpp/work-in-uni/week-03/Files and Streams/main.cpp
+	<iostream>
+	<fstream>
+
+1457448657 source:/home/dian/Documents/workspace/learning-code/learning-cpp/work-in-uni/week-03/Files and Streams/BankAccount.cpp
+

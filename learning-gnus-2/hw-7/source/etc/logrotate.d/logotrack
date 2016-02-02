@@ -1,0 +1,7 @@
+/var/log/logotrack {
+	missingok
+	daily
+	notifempty
+	delaycompress 
+	rotate 5
+}

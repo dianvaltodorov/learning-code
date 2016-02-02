@@ -1,0 +1,33 @@
+(count-occurences =  1 '(1 2 3 2 1 1 1 2 1))
+(custom-member? eq? 1 '(1 2 3 2 1 1 1 2 1))
+(remove-duplicates = '(1 2 1 1 1 1 12 2 4 5))
+(frequency-list = '(1 2 1 1 7 6 5 4 5 6 5 4 3 3 2 2 2 4 4 8 1))
+
+(leaf? (create-leaf 'A 30))
+(leaf-item (create-leaf 'A 30))
+(leaf-weight (create-leaf 'A 30))
+
+(define t1
+  (create-tree (create-leaf 'A 4)
+                       (create-tree
+                        (create-leaf 'B 2)
+                        (create-tree (create-leaf 'D 1)
+      
+(left-subtree t1) 
+(right-subtree t1)
+(tree-items t1)
+(tree-weight t1)
+
+(ordered-leaf-set = '(1 2 1 1 7 6 5 4 5 6 5 4 3 3 2 2 2 4 4 8 1))
+(huffman-tree = '(1 2 1 1 7 6 5 4 5 6 5 4 3 3 2 2 2 4 4 8 1))
+
+(all-encodings t1)
+
+
+(define t4 '((leaf A 3) ((leaf B 2) ((leaf C 1) (leaf D 1) (C D) 2) (B C D) 4) (A B C D) 7))
+(define b4 '( 0 1 1 1 0 1 0 1 0 1 1 0 0))
+(define m4 '(A D A B B C A))
+
+(encode m4 eq?)
+(decode b4 t4)
+

@@ -1,0 +1,14 @@
+total 52
+drwxr-x--- 2 dian dian 4096 мар 14 20:47 apt-vim
+drwxr-xr-x 2 dian dian 4096 фев 23 21:05 Desktop
+drwxrwxr-x 2 dian dian 4096 мар 21 09:32 dir1
+drwxr-xr-x 5 dian dian 4096 мар 21 09:02 Documents
+drwxr-xr-x 4 dian dian 4096 мар 20 20:45 Downloads
+drwxrwxr-x 2 dian dian 4096 мар 21 10:06 exerc02
+drwxrwxr-x 5 dian dian 4096 мар 11 21:09 Installations
+drwxr-xr-x 2 dian dian 4096 фев 23 21:05 Music
+drwxr-xr-x 2 dian dian 4096 фев 29 19:24 Pictures
+drwxr-xr-x 2 dian dian 4096 мар 11 11:58 Public
+drwxrwxr-x 3 dian dian 4096 мар 20 16:02 R
+drwxr-xr-x 2 dian dian 4096 фев 23 21:05 Templates
+drwxr-xr-x 2 dian dian 4096 фев 23 21:05 Videos

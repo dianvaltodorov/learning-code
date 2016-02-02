@@ -1,0 +1,24 @@
+.TH FOO 1 "DECEMBER 2017" Linux "User Manuals"
+.SH NAME
+logotrack \- track login sessions for a specified user
+.SH SYNOPSIS
+.B logotrack
+.SH DESCRIPTION
+.B logotrack
+tracks the number of login sessions for a specified user. It calls 
+the 
+.BR who (1)
+command on regular intervals and counts how many session there are 
+for the user. This information is logged using the 
+.BR logger (1)
+command
+.SH FILES
+.I /etc/logotrack.conf
+.RS
+The configuration file for logotrack. It contains variables which set the tracked user and the time interval.
+TRACKED_USER= 
+.SH AUTHOR
+Dian Todorov <dianvaltodorov@gmail.comt>
+.SH "SEE ALSO"
+.BR logger (1),
+.BR who (1)

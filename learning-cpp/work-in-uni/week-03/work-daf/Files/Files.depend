@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1457445935 source:/home/dian/Documents/workspace/learning-code/learning-cpp/work-in-uni/week-03/Files/main.cpp
+	"BankAccount.h"
+	<iostream>
+
+1457445957 /home/dian/Documents/workspace/learning-code/learning-cpp/work-in-uni/week-03/Files/BankAccount.h
+

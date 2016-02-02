@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+  <meta charset="utf-8"/>
+</head>
+<body>
+
+  <template id="mytemplate">
+    <img src="" alt="great image">
+    <div class="comment"></div>
+  </template>
+
+  <template id="used-template">
+    <div>Template used: <span>0</span></div>
+    <script>alert('Thanks!')</script>
+  </template>
+
+  <button onclick="useIt()">Use me</button>
+  <div id="container"></div>
+
+  <script>
+  function supportsTemplate() {
+    return 'content' in document.createElement('template');
+  }
+
+  if (supportsTemplate()) {
+    console.log("Yes");
+  } else {
+    console.log("Yes");
+  }
+
+  var t = document.querySelector('#mytemplate');
+  // Populate the src at runtime.
+  t.content.querySelector('img').src = 'logo.png';
+
+  var clone = document.importNode(t.content, true);
+  document.body.appendChild(clone);
+
+  function useIt() {
+    var content = document.querySelector('used-template').content;
+    // Update something in the template DOM.
+    console.log("Using it")
+    var span = content.querySelector('span');
+    span.textContent = parseInt(span.textContent) + 1;
+    document.querySelector('#container').appendChild(
+        document.importNode(content, true));
+  }
+  </script>
+
+</body>
+</html>

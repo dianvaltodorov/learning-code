@@ -1,0 +1,28 @@
+#!/bin/bash
+# pull in configuration settings
+[ -f /etc/logotrack.conf ] && . /etc/logotrack.conf
+
+# Configuration for the facility and priority
+FACILITY=local7
+PRIORITY=info
+
+TRACKED_USER=${TRACKED_USER:-root} 
+INTERVAL=${INTERVAL:-1} 
+
+((count = 0 ))
+
+while true
+do
+	new_count=$( who | cut -d " " -f1 | grep "^$TRACKED_USER$" | wc -l )
+	if [ $count -lt $new_count ]
+	then
+		logger -p $FACILITY.$PRIORITY "User session for $TRACKED_USER are increased to $new_count"
+	elif [ $count -gt $new_count ]
+	then
+		logger -p $FACILITY.$PRIORITY "User session for $TRACKED_USER are decreased to $new_count"
+	else
+		logger -p $FACILITY.$PRIORITY "User session for $TRACKED_USER are still $count"
+	fi
+	count=$new_count
+	sleep $INTERVAL
+done

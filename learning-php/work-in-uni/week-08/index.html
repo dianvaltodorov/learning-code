@@ -1,0 +1,29 @@
+<html>
+  <head>
+
+  </head>
+
+  <body>
+    <p>This is javascript</p>
+    <form>
+      <input type="text" name="title"></input>
+      <input type="text" name="lecturer"></input>
+      <input type="submit" value="Submit" id="submit_btn"></input>
+    </form>
+  </body>
+
+  <script type="text/javascript">
+    function onFormSubmit(event){
+      console.log(event)
+    }
+
+    function onButtonClick(event){
+      console.log(event)
+    }
+    var form = document.getElementByTagName('form')
+    form[0].addEventListener(hg)
+    form.addEventListener('submit', onFormSubmit)
+
+    var button = document.getElementById('')
+  </script>
+</html>

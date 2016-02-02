@@ -1,0 +1,66 @@
+#!/bin/sh
+#
+### BEGIN INIT INFO
+# Provides:          logotrack
+# Required-Start:    $remote_fs $syslog $time
+# Required-Stop:     $remote_fs $syslog $time
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Default-Stop:
+# Short-Description: Track login session for a user 
+# Description:       logotrack is a UNIX program for tracking the logging sessions of
+#					 a specified user. It runs at regular time intervals and logs the 
+# 					 number of sessions.
+### END INIT INFO
+
+PATH=/bin:/usr/bin:/sbin:/usr/sbin
+DESC="logotrack daemon"
+NAME=logotrack
+DAEMON=/usr/bin/logotrack
+PIDFILE=/var/run/logotrack.pid
+SCRIPTNAME=/etc/init.d/"$NAME"
+
+
+# source function library
+. /lib/lsb/init-functions
+
+# pull in configuration settings
+[ -f /etc/logotrack.conf ] && . /etc/logotrack.conf
+
+# test if the daemon exists
+test -x $DAEMON || exit 0
+
+start() {	
+    log_daemon_msg "Starting logotrack for user" $TRACKED_USER
+	start_daemon -b -p $PIDFILE $DAEMON 
+	log_end_msg $?
+}
+
+stop() {
+    log_daemon_msg "Stopping logotrack for user" $TRACKED_USER
+	killproc -p $PIDFILE $DAEMON
+	log_end_msg $?
+}
+
+restart() {	
+    $0 stop
+    $0 start
+}
+
+case "$1" in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+  	restart)
+		restart
+		;;
+	status)
+			status_of_proc -p $PIDFILE $DAEMON $NAME && exit 0 || exit $?
+			;;
+	*)      log_action_msg "Usage: /etc/init.d/cron {start|stop|status|restart|reload|force-reload}"
+			exit 2
+			;;
+esac

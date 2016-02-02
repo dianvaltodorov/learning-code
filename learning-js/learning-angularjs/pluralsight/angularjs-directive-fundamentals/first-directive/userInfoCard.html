@@ -1,0 +1,15 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">{{ user.name }}</div>
+    <div class="panel-body">
+        <div ng-show="!!user.address">
+            <p>{{user.address.city}}</p>
+            <p>{{user.address.planet}}</p>
+            <p>{{user.address.street}}</p>
+        </div>
+        <div>
+            <ul ng-repeat="friend in user.friends">
+                <li>{{friend}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

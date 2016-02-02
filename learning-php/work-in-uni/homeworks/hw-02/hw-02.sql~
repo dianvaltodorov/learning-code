@@ -1,0 +1,27 @@
+CREATE TABLE student
+(
+	id int NOT NULL AUTO_INCREMENT,
+	first_name varchar(255),
+	last_name varchar(255),
+	faculty_numberint,
+	group_id int,
+	PRIMARY KEY (id),
+	FOREIGN KEY (group_id) REFERENCES groups(id)
+);
+
+CREATE TABLE groups(
+	id int NOT NULL AUTO_INCREMENT,
+	major_id int,
+	lecturer VARCHAR(255),
+	PRIMARY KEY (id),
+	FOREIGN KEY (major_id) REFERENCES majors(id)
+	
+);
+
+CREATE TABLE majors(
+	id int NOT NULL AUTO_INCREMENT,
+	name VARCHAR(255),
+	academic_degree VARCHAR(255)
+	start_year INT,
+	PRIMARY KEY (id),
+);

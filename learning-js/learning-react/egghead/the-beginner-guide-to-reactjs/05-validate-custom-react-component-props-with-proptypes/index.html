@@ -1,0 +1,83 @@
+<div id="root">
+</div>
+<script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+<script crossorigin src="https://unpkg.com/prop-types/prop-types.js"></script>
+
+<script type="text/babel">
+
+    const rootElement = document.getElementById('root'); 
+    function SayHelloAsFunction(props) {
+        return <div>
+                Hello {props.firstName} {props.lastName}
+        </div>
+    }
+    SayHelloAsFunction.propTypes = {
+        firstName: PropTypes.string.isRequired,
+        lastName: PropTypes.string.isRequired
+    }
+
+    class SayHelloAsClass extends React.Component {
+        static propTypes = {
+            firstName: PropTypes.string.isRequired,
+            lastName: PropTypes.string.isRequired
+        }
+        render (props) {
+            const {firstName, lastName} = this.props
+            return <div>
+                Hello {firstName} {lastName}
+        </div>
+        }
+    }
+
+    ReactDOM.render(
+        <div> 
+            <SayHelloAsClass firstName="Dido" lastName="Mido"/>
+            <SayHelloAsFunction firstName="Dido" lastName="Mido"/>
+        </div>, 
+        
+        rootElement);
+</script>
+
+
+<script type="text/babel">
+
+    const rootElement = document.getElementById('root');
+    function Message({message}) {
+        return message 
+            ? <div>{message}</div>
+            : <div>No message</div> }
+    ReactDOM.render(
+        <div>
+             <Message message="Hello world" />
+             <Message />
+        </div>,
+        document.getElementById('root'),
+    )
+</script>
+
+<script type="text/babel">
+
+    const rootElement = document.getElementById('root');
+    function Message({message}){
+        
+        return message)?
+            ?   React.createElement('div', null, message)
+            : React.createElement('div', null, 'No Message')
+    }
+    ReactDOM.render(
+        <div>
+             <Message message="Hello world" />
+             <Message />
+        </div>,
+        document.getElementById('root'),
+    )
+</script>
+
+      function Message({message}){
+            if (!message){
+                return <div>No Message</div>
+            }
+            return <div>{message}</div>
+        }
